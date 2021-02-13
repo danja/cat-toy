@@ -1,7 +1,9 @@
 # Cat Annoyer
 Arduino-based cat toy.
 
-The Annoyer is a very simple system using inexpensive components to roughly mimic the behaviour of a small rodent.
+[![Cat Annoyer](https://img.youtube.com/vi/FwHjwoEb1Nw/0.jpg)](https://www.youtube.com/watch?v=FwHjwoEb1Nw)
+
+The Annoyer is a very simple system using inexpensive components to roughly mimic the behaviour of a small rodent. It has a proximity sensor to detect cat interactions and can be triggered using a TV remote control.
 
 ## Hardware
 
@@ -12,8 +14,10 @@ The Annoyer is a very simple system using inexpensive components to roughly mimi
 * Pom-pom & wooden skewer
 * Misc. hardware - I mounted mine on a plywood offcut with scraps of aluminium for the power input/switch and servo, a hose clamp for the battery and plastic PCB standoffs for the circuit board
 
+The electronic components are available from many sources at very low cost.
+
 I already had some Arduino Nanos and recently bought a
-[Geekcreit UNOR3 Basic Starter Kits No Battery Version for Arduino Carton Box Packaging](https://www.banggood.com/Geekcreit-UNOR3-Basic-Starter-Kits-No-Battery-Version-for-Arduino-Carton-Box-Packaging-p-1133595.html) (which contains a breadboard, Arduino Uno and a servo) and a [Geekcreit 37 In 1 Sensor Module Board Set Starter Kits SENSOR KIT For Arduino Plastic Bag Package](https://www.banggood.com/Geekcreit-37-In-1-Sensor-Module-Board-Set-Starter-Kits-SENSOR-KIT-For-Arduino-Plastic-Bag-Package-p-1137051.html) which includes an 'Avoidance Sensor'. These packs are very good value for money and lots of fun.
+[Geekcreit UNOR3 Basic Starter Kits No Battery Version for Arduino Carton Box Packaging](https://www.banggood.com/Geekcreit-UNOR3-Basic-Starter-Kits-No-Battery-Version-for-Arduino-Carton-Box-Packaging-p-1133595.html) (which as well as lots of other things contains a breadboard, Arduino Uno and a servo) and a [Geekcreit 37 In 1 Sensor Module Board Set Starter Kits SENSOR KIT For Arduino Plastic Bag Package](https://www.banggood.com/Geekcreit-37-In-1-Sensor-Module-Board-Set-Starter-Kits-SENSOR-KIT-For-Arduino-Plastic-Bag-Package-p-1137051.html) which includes an 'Avoidance Sensor'. These packs are very good value for money and lots of fun.
 
 ## Construction
 
@@ -47,7 +51,7 @@ As well as the appropriate libraries needed for the board you use, the only othe
 I used PlatformIO on VSCode on Ubuntu for writing the code and uploading to the Arduino, but the same code should work just fine copy & pasted into an empty Arduino IDE project. The Servo library is maintained by the Arduino folks, can be installed through the library manager of the IDE you use.
 *While the Arduino IDE is fine for little projects like this, if you are planning anything more ambitious I'd strongly recommend using PlatformIO, it makes multi-file projects much more manageable.* 
 
-### Behaviour
+## Behaviour
 
 After compiling and uploading to the Arduino (or power on/reset) there will be a delay of 5 seconds before the servo will sweep backwards and forwards (with a little twitch), ```wave()``` in the code.
 
@@ -55,6 +59,14 @@ Whenever the proximity detector sees an obstacle (or changes from seeing an obst
 
 If there's no change in the sensor's status for 10 minutes it will do another slow sweep.
 
-The LED on the Arduino whenever the proximity detector reports an obstacle. Ths sensor has two screwdriver-adjustable conrols. One adjusts the frequency of IR pulses, should make no difference to behaviour. The other controls the sensitivity, ie. distance.   
+The LED on the Arduino is lit whenever the proximity detector reports an obstacle. Ths sensor has two screwdriver-adjustable conrols. One adjusts the frequency of IR pulses (I believe in the region of 35kHz), should make no difference to behaviour. The other controls the sensitivity, ie. distance.   
 
+**PS.** On trying it out with my friend's cat for the first time, realised the inactivity delay of 10 mins I'd set was too long to keep the cat's attention. *But*, out of curiosity I tried a TV remote control, without doing anything esle, and that triggered twitching. Serendipity! I'm guessing the mod freq sensor preset might need tweaking for some remotes, but it work out of the box for my friends. 
 
+## Possible Improvements
+
+With the same hardware it might be interesting to record the sensor input over time and use this to determine the movement of the servo - ie. learn what annoys the cat the most.
+
+There are plenty of other I/O lines available on the Arduino. Simple additions could include sending a mousy squeak to a loudspeaker or other servos for more complex behaviours. Cheap motors & drivers are available, a mobile cat-annoying bot would be straightforward. Other sensors could be added: eg. the cheap ultrasonic sensor modules have quite a large (variable) oject-detection distance, could be used to offer behaviour to attract a distant animal.
+
+With suitable code changes, the same hardware could be set up to make an automatic cat feeder. Not as much fun as annoying them.
