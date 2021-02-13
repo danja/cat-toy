@@ -75,11 +75,11 @@ After compiling and uploading to the Arduino (or power on/reset) there will be a
 
 Whenever the proximity detector sees an obstacle (or changes from seeing an obstacle to not seeing an obstacle) it will twitch a random distance in a given direction. When it reaches that extreme it will switch direction.
 
-If there's no change in the sensor's status for 10 minutes it will do another slow sweep.
+If there's no change in the sensor's status for 5 minutes it will do another slow sweep.
 
 The LED on the Arduino is lit whenever the proximity detector reports an obstacle. Ths sensor has two screwdriver-adjustable conrols. One adjusts the frequency of IR pulses (I believe in the region of 35kHz), should make no difference to behaviour. The other controls the sensitivity, ie. distance.   
 
-**PS.** On trying it out with my friend's cat for the first time, realised the inactivity delay of 10 mins I'd set was too long to keep the cat's attention. *But*, out of curiosity I tried a TV remote control, without doing anything esle, and that triggered twitching. Serendipity! I'm guessing the mod freq sensor preset might need tweaking for some remotes, but it work out of the box for my friends. 
+**PS.** On trying it out with my friend's cat for the first time, realised the inactivity delay of 10 mins I'd set was too long to keep the cat's attention. *But*, out of curiosity I tried a TV remote control, without doing anything esle, and that triggered twitching. Serendipity! I'm guessing the mod freq sensor preset might need tweaking for some remotes, but it worked out of the box for my friend's. 
 
 ## Possible Improvements
 
