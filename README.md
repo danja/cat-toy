@@ -7,7 +7,7 @@ The Cat Annoyer is a simple system using inexpensive components to roughly mimic
 
 It really is easy to build. A breadboard prototype took me about an hour (most of that time was taken by me trying to figure out non-existent problems, I'd installed the libraries for the wrong Arduino Nano version). 
 
-[![Breadboard version](https://img.youtube.com/vi/ekWHGxoxt0Y)](https://www.youtube.com/watch?v=ekWHGxoxt0Y)
+[![Breadboard version](https://img.youtube.com/vi/ekWHGxoxt0Y/0.jpg)](https://www.youtube.com/watch?v=ekWHGxoxt0Y)
 
 A more solid version, with more interesting behaviour took about another hour. Making the pom-pom probably took most time.
 
@@ -60,7 +60,7 @@ Orange   D2
 
 ## Software
 
-As well as the appropriate libraries needed for the board you use, the only other dependency is the [Servo library](https://www.arduino.cc/reference/en/libraries/servo/). All the code for the Cat Annoyer is in ```main.cpp```.
+As well as the appropriate libraries needed for the board you use, the only other dependency is the [Servo library](https://www.arduino.cc/reference/en/libraries/servo/). All the code for the Cat Annoyer is in [main.cpp](https://github.com/danja/cat-toy/blob/main/cat-toy/src/main.cpp).
 
 I used PlatformIO on VSCode on Ubuntu for writing the code and uploading to the Arduino, but the same code should work just fine copy & pasted into an empty Arduino IDE project. The Servo library is maintained by the Arduino folks, can be installed through the library manager of the IDE you use.
 *While the Arduino IDE is fine for little projects like this, if you are planning anything more ambitious I'd strongly recommend using PlatformIO, it makes multi-file projects much more manageable.* 
