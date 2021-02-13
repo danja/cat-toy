@@ -8,7 +8,7 @@ const int LED = 13; // Onboard LED
 const int SERVO_PIN = 2;
 const int PROXIMITY_PIN = 3;
 
-const unsigned long INACTIVITY_DELAY = 600000; // 10 minutes
+const unsigned long INACTIVITY_DELAY = 300000; // 5 minutes
 const int MAX_ANGLE_STEP = 30; // max jump for each reaction
 
 unsigned long lastChangeTime = millis();
