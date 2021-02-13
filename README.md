@@ -1,11 +1,15 @@
 # Cat Annoyer
 Arduino-based cat toy.
 
+**Click image for video -**
+
 [![Cat Annoyer](https://img.youtube.com/vi/FwHjwoEb1Nw/0.jpg)](https://www.youtube.com/watch?v=FwHjwoEb1Nw)
 
 The Cat Annoyer is a simple system using inexpensive components to roughly mimic the behaviour of a small rodent. It has a proximity sensor to detect cat interactions and can be triggered using a TV remote control.
 
 It really is easy to build. A breadboard prototype took me about an hour (most of that time was taken by me trying to figure out non-existent problems, I'd installed the libraries for the wrong Arduino Nano version). 
+
+**Click image for video -**
 
 [![Breadboard version](https://img.youtube.com/vi/ekWHGxoxt0Y/0.jpg)](https://www.youtube.com/watch?v=ekWHGxoxt0Y)
 
