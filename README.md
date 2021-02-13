@@ -3,11 +3,19 @@ Arduino-based cat toy.
 
 [![Cat Annoyer](https://img.youtube.com/vi/FwHjwoEb1Nw/0.jpg)](https://www.youtube.com/watch?v=FwHjwoEb1Nw)
 
-The Annoyer is a simple system using inexpensive components to roughly mimic the behaviour of a small rodent. It has a proximity sensor to detect cat interactions and can be triggered using a TV remote control.
+The Cat Annoyer is a simple system using inexpensive components to roughly mimic the behaviour of a small rodent. It has a proximity sensor to detect cat interactions and can be triggered using a TV remote control.
 
-It really is easy to build. A breadboard prototype took me about an hour (most of that time was taken by me trying to figure out non-existent problems, I'd installed the libraries for the wrong Arduino Nano version). A more solid version, with more interesting behaviour took about another hour. Making the pom-pom probably took most time.
+It really is easy to build. A breadboard prototype took me about an hour (most of that time was taken by me trying to figure out non-existent problems, I'd installed the libraries for the wrong Arduino Nano version). 
+
+[![Breadboard version](https://img.youtube.com/vi/ekWHGxoxt0Y)](https://www.youtube.com/watch?v=ekWHGxoxt0Y)
+
+A more solid version, with more interesting behaviour took about another hour. Making the pom-pom probably took most time.
+
+![Pom-pom](https://github.com/danja/cat-toy/blob/main/cat-toy/media/pom-pom.jpeg)
 
 ## Hardware
+
+![Parts](https://github.com/danja/cat-toy/blob/main/cat-toy/media/parts.jpeg)
 
 * Arduino microcontroller module (I used a Nano) + USB cable
 * 'Avoidance Sensor' - IR proximity detector module
@@ -17,6 +25,8 @@ It really is easy to build. A breadboard prototype took me about an hour (most o
 * Misc. hardware - I mounted mine on a plywood offcut with scraps of aluminium for the power input/switch and servo, a hose clamp for the battery and plastic PCB standoffs for the circuit board
 
 The electronic components are available from many sources at very low cost.
+
+![Built thing](https://github.com/danja/cat-toy/blob/main/cat-toy/media/board1.jpeg)
 
 I already had some Arduino Nanos and recently bought a
 [Geekcreit UNOR3 Basic Starter Kits No Battery Version for Arduino Carton Box Packaging](https://www.banggood.com/Geekcreit-UNOR3-Basic-Starter-Kits-No-Battery-Version-for-Arduino-Carton-Box-Packaging-p-1133595.html) (which as well as lots of other things contains a breadboard, Arduino Uno and a servo) and a [Geekcreit 37 In 1 Sensor Module Board Set Starter Kits SENSOR KIT For Arduino Plastic Bag Package](https://www.banggood.com/Geekcreit-37-In-1-Sensor-Module-Board-Set-Starter-Kits-SENSOR-KIT-For-Arduino-Plastic-Bag-Package-p-1137051.html) which includes an 'Avoidance Sensor'. These packs are very good value for money and lots of fun.
@@ -28,6 +38,8 @@ The circuit is very simple, I didn't bother drawing it.
 The Arduino USB connection to a computer can supply the power, alternately a battery or power pack (7-12v DC) can be attached to Vin and GND.
 
 The sensor and servo take power from the Arduino, GND and +5v (**not** the battery voltage). The sensor has a data out line, the servo a data in, which should be connected to data D3 and D2 respectively on the Arduino.
+
+![Built thing2](https://github.com/danja/cat-toy/blob/main/cat-toy/media/board2.jpeg)
 
 A pom-pom can be easily made with a bit of wool and a couple of cardboard circles.
 
